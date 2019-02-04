@@ -13,9 +13,9 @@ The original reference list of similar-to characters is downloadable from [unico
 
 Where the action happens. The script analyses an open font for potential confusables against the abridged list **confusables-list-short.txt**. If successful it will generate .calt contextual alternates for each as well as the necessary opentype classes and feature. 
 
-**Conf-makelist.py** was used to strip the source reference down from 600kb to 40kb. I then manually abridged the resulting file further to save on processing. The pre-abridged file *confusables-sorted.txt* contains lists for a wider range of scripts beyond latin should that interest you. It's worth nothing that you could roll-your-own confusables by editing the list by hand.
+**Conf-makelist.py** was used to strip the source reference down from 600kb to 40kb. I then manually abridged the resulting file further to save on processing. The pre-abridged file *confusables-sorted.txt* contains lists for a wider range of scripts beyond latin should that interest you. It's worth nothing that you could roll-your-own confusables by editing the list by hand. I found some questionable choices inside the list but have chosen to interpret the data as I found it.
 
-The larger the glyph set the more confusables and the better the effect will be.
+The larger the glyph set the more confusables and the better the effect will be. In order to see the effect in action you must have contextual alternates enabled software.
 
 The boat just about floats. Please leave any comments, requests, bugs here on GitHub. 
 
