@@ -17,7 +17,7 @@ Where the action happens. The script analyses an open font for potential confusa
 
 The larger the glyph set the more confusables and confused the text will be. In order to see the effect in action you must have contextual alternates enabled software. [scripts.sil.org](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=fontdownloads) is a great place to find useable fonts under the Open Font License.
 
-The boat just about floats. Please leave any comments, requests, bugs here on GitHub. 
+The boat just about floats. Please report all bugs, comments and feature requests via GitHub.
 
 Thanks to [Georg Seifert](https://github.com/schriftgestalt) for a critical bux fix. I made more than liberal use of Rainer Erich Scheichelbauer's script [Beowulferize.py](https://github.com/mekkablue/Glyphs-Scripts/blob/master/Effects/Beowulferize.py) to generate the opentype code.
 
