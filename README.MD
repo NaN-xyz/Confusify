@@ -4,7 +4,7 @@ A collection of [GlyphsApp](https://glyphsapp.com/) scripts to »Confusify« any
 
 A *confusable* is a glyph that is so similar to another that it may be confused for it. ſ for f, Ꮟ for b or strung together as 5໐meтhiתg 1ıк℮ τհiՏ. 
 
-Confusify generates fonts that when typed automatically swap confusables for the original. All confusables generated are existing characters in the source font. In that sense it's a remix.
+Confusify.py generates fonts that when typed automatically swap confusables for the original. All confusables generated are existing characters in the source font. In that sense it's a remix.
 
 The original reference list of *similar-to* characters is downloadable from [unicode.org](http://unicode.org/cldr/utility/confusables.jsp). 
 
