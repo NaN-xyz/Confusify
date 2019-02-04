@@ -4,14 +4,14 @@ A collection of [GlyphsApp](https://glyphsapp.com/) scripts to »Confusify« any
 
 A *confusable* is a glyph that is so similar to another that it may be confused for it. ſ for f, Ꮟ for b or written together as 5໐meтhiתg 1ıк℮ τհiՏ. 
 
-Confusify generates fonts that when typed automatically swaps confusables for the original. All confusables are existing characters in the source font. In that sense it's a remix.
+Confusify generates fonts that when typed automatically swaps confusables for the original. All confusables generated are existing characters in the source font. In that sense it's a remix.
 
-The original reference list of similar-to characters is downloadable from [unicode.org](http://unicode.org/cldr/utility/confusables.jsp). 
+The original reference list of *similar-to* characters is downloadable from [unicode.org](http://unicode.org/cldr/utility/confusables.jsp). 
 
 
 ## Confusify.py
 
-Where the action happens. The script analyses an open font for potential confusables against the abridged list **confusables-list-short.txt**. If successful it will generate .calt contextual alternates for each as well as the necessary opentype classes and feature. 
+Where the action happens. The script analyses an open font for potential confusables against the abridged local list **confusables-list-short.txt**. If successful it will generate .calt contextual alternates for each as well as the necessary opentype classes and feature. You can then export the font as you see fit.
 
 **Conf-makelist.py** was used to strip the source reference down from 600kb to 40kb. I then manually abridged the resulting file further to save on processing. The pre-abridged file *confusables-sorted.txt* contains lists for a wider range of scripts beyond latin should that interest you. It's worth nothing that you could roll-your-own confusables by editing the list by hand. I found some questionable choices inside the list but have chosen to interpret the data as I found it.
 
