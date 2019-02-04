@@ -2,12 +2,11 @@
 
 A collection of [GlyphsApp](https://glyphsapp.com/) scripts to »Confusify« any given font as well as sample fonts to download and use under their respective licences.
 
-A *confusable* is a glyph that is so similar to another that it may be confused for it. 5໐meтhiתg 1ıк℮ τհiՏ. 
+A *confusable* is a glyph that is so similar to another that it may be confused for it. α for a, Ꮟ for b or compiled to 5໐meтhiתg 1ıк℮ τհiՏ. 
 
 Confusify generates fonts that automatically swap confusables for the source entry. All confusables are existing characters in the source font. 
 
 The original reference list of similar-to characters is downloadable from [unicode.org](http://unicode.org/cldr/utility/confusables.jsp). 
-
 
 
 ## Confusify.py
