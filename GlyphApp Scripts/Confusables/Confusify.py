@@ -1,8 +1,10 @@
 #MenuTitle: Confusify
 # -*- coding: utf-8 -*-
+from __future__ import division, print_function, unicode_literals
 __doc__="""
 Generates fonts that swap unicode prescribed confusables for the original reference glyph.
 """
+
 
 # 
 # https://twitter.com/luke_prowse
@@ -82,19 +84,19 @@ def create_otclass( classname   = "@default",
 
 def generateOT ():
 
-	print "\nUsing MekkaBlue OT generation code from BEOWULFERIZER\n-"
+	print("\nUsing MekkaBlue OT generation code from BEOWULFERIZER\n-")
 
 	# Create Classes:
-	print create_otclass( classname="default", classglyphs=keyDict, targetfont=font )
+	print(create_otclass( classname="default", classglyphs=keyDict, targetfont=font ))
 	for i in range( alphabets ):
-		print create_otclass( classname="calt"+str(i), classglyphs=[ n+".calt"+str(i) for n in keyDict ], targetfont=Font )
+		print(create_otclass( classname="calt"+str(i), classglyphs=[ n+".calt"+str(i) for n in keyDict ], targetfont=Font ))
 
 	# Create OT Feature:
 	ConfusoWolf = ""
 	for i in range( ( alphabets * ( linelength//alphabets ) + 1 ), 0, -1 ):
-		ConfusoWolf += "sub @default' " + "@default " * i + "by @calt" + str( ( range(alphabets) * ((linelength//alphabets)+2))[i] ) + ";\n"
+		ConfusoWolf += "sub @default' " + "@default " * i + "by @calt" + str( ( list(range(alphabets)) * ((linelength//alphabets)+2))[i] ) + ";\n"
 
-	print create_otfeature( featurename="calt", featurecode=ConfusoWolf, targetfont=Font, codesig="CONFUSABLES via BEOWULFERIZER")
+	print(create_otfeature( featurename="calt", featurecode=ConfusoWolf, targetfont=Font, codesig="CONFUSABLES via BEOWULFERIZER"))
 
 
 # load sorted list
@@ -146,9 +148,9 @@ for dl in ConfList:
 		GlyphsToCalt_local.append(tmpconflist_local)	
 
 
-print "Key glyphs available in font: " + str(GlyphsAvailable)
-print "Of which have at least one confusable: " + str(len(GlyphsToCalt))
-print "Total number of confusables in font: " + str(confCount)
+print( "Key glyphs available in font: " + str(GlyphsAvailable) )
+print( "Of which have at least one confusable: " + str(len(GlyphsToCalt)) )
+print( "Total number of confusables in font: " + str(confCount) )
 
 
 
@@ -177,14 +179,14 @@ for gc in GlyphsToCalt:
 
 	for lc in gc:
 		gstr = gstr + lc + " " 	
-	print gstr
+	print(gstr)
 
 avgCALT = avgconf / len(GlyphsToCalt)
 alphabets = maxconf
 linelength = alphabets
 
-print "Highest CALT Level: " + str(maxconf)
-print "Average number of confusables: " + str(avgCALT)
+print( "Highest CALT Level: " + str(maxconf) )
+print( "Average number of confusables: " + str(avgCALT) )
 
 
 font.disableUpdateInterface()
